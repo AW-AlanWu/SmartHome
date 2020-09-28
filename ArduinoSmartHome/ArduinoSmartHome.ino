@@ -1,15 +1,17 @@
-void setup() {
-  // put your setup code here, to run once:
+void setup()
+{
   pinMode(12, OUTPUT);
   pinMode(11, OUTPUT);
+  pinMode(7, OUTPUT);
 }
-
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
   digitalWrite(12, HIGH);
   digitalWrite(11, LOW);
-  delay(500);
+  tone(7, 750, 500);
+  delay(200);
   digitalWrite(12, LOW);
   digitalWrite(11, HIGH);
+  tone(7, 100, 300);
   delay(500);
 }
